@@ -4,9 +4,10 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
-  background-color: red;
+  /* background-color: red; */
 }
 
+/* Utilità */
 .container_1000 {
   max-width: 1000px;
   margin: 0 auto;
@@ -25,7 +26,57 @@ body {
   font-size: 1.1em;
   font-weight: bold;
 }
+.lg_display_none {
+  display: none;
+}
+.lg_display_block {
+  display: block;
+}
+.p_medium {
+  font-size: 1.8em;
+  margin: 20px 0;
+}
+.text_center {
+  text-align: center;
+}
+.margin_top_40 {
+  margin-top: 40px;
+}
+.margin_top_300 {
+  margin-top: 300px;
+}
+.margin_top_650 {
+  margin-top: 650px;
+}
+/* Link */
+a.link_arrow {
+  font-size: 1.8em;
+  text-decoration: none;
+  color: #3978BE;
+}
+a.link_arrow span,
+a.link_arrow span,
+a.link_arrow span{
+  margin-right: 5px;
+}
+a.link_arrow:hover span,
+a.link_arrow:active span,
+a.link_arrow:focus span{
+  text-decoration: underline;
+  margin-right: 5px;
+}
+a.link_arrow:after {
+  content: '\f054';
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  display: inline;
+  vertical-align: middle;
+}
+a.link_white {
+  color: white;
+}
 
+/* header */
 header {
   background-color: white;
 }
@@ -56,13 +107,7 @@ header {
   vertical-align: middle;
 }
 
-.lg_display_none {
-  display: none;
-}
-.lg_display_block {
-  display: block;
-}
-
+/* Jumbo */
 .jumbo {
   position: relative;
   height: 400px;
@@ -89,16 +134,74 @@ header {
   margin-bottom: 0.8rem;
 }
 
+/* Products */
+.box_grey {
+  margin: 0 10px;
+  padding: 40px 20px;
+  background-color: #FAFAFA;
+  text-align: center;
+}
+.products_title {
+  height: 20px;
+}
+.bikes {
+  display: block;
+  width: 50%;
+  margin: 10px auto 0;
+}
+
+/* OldMan */
+#old_man {
+  background-image: url(../img/HelbizBanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+.iphone {
+  width: 80%;
+}
+
+/* smart */
+.bg_smart {
+  position: relative;
+  height: 400px;
+  background-image: url(../img/ScooterHelbiz-2400.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.text_banner {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 30%;
+  padding: 0 30px;
+  transform: translateY(-50%);
+  color: white;
+}
+.text_banner h2 {
+  font-size: 3.5em;
+}
+.text_banner p {
+  margin: 20px 0;
+  font-size: 2em;
+}
+
+/* Media Query */
 @media screen and (max-width: 992px) and (min-width: 768px) {
-  .header-top {
-    padding: 0 2%;
-  }
+  /* Utilita */
   .md_display_block {
     display: block;
   }
   .md_display_none {
     display: none;
   }
+
+  /* header */
+  .header-top {
+    padding: 0 2%;
+  }
+
+  /* Jumbo */
   .jumbo_text a {
     width: calc(100% / 4);
     display: inline-block;
@@ -106,21 +209,32 @@ header {
   .jumbo_text a img {
     width: 100%;
   }
+
+  .text_banner {
+    font-size: 8px;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
   body {
     font-size: 8px;
   }
+
+  /* Utilita */
   .xs_display_block {
     display: block;
   }
   .xs_display_none {
     display: none;
   }
+
+  /* header */
   .header-top {
     padding: 0 2%;
   }
+
+  /* Jumbo */
   .jumbo_text h1 {
     font-size: 3.5em;
     margin-bottom: 0.8rem;
@@ -135,5 +249,22 @@ header {
   }
   .jumbo_text a img {
     width: 100%;
+  }
+
+  /* Products */
+  .products_title {
+    height: 15px;
+  }
+  .xs_margin_bottom_20 {
+    margin-bottom: 20px;
+  }
+
+  /* smart */
+  .text_banner {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    font-size: 5px;
   }
 }
